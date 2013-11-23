@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>FHNW-AD-SYNC for OS X by davidhuser</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>FHNW-AD-SYNC for OS X</h1>
+        <p>syncs unidirectional with FHNW active directory into local folder</p>
+
+        <p class="view"><a href="https://github.com/davidhuser/fhnw-ad-sync">View the Project on GitHub <small>davidhuser/fhnw-ad-sync</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/davidhuser/fhnw-ad-sync/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/davidhuser/fhnw-ad-sync/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/davidhuser/fhnw-ad-sync">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="fhnw-active-directory-folder-sync" class="anchor" href="#fhnw-active-directory-folder-sync"><span class="octicon octicon-link"></span></a>FHNW Active Directory Folder Sync</h1>
+
+<p>Dieses Skript verbindet sich bei Programmstart automatisch mit dem VPN der FHNW (Passwort ausgelesen aus dem Schlüsselbund von OS X), mountet das Active Directory und synchronisiert unidirektional den angegebenen (Klassen-)Ordner in den angegebenen lokalen Ordner.</p>
+
+<h2>
+<a name="1-konfiguration" class="anchor" href="#1-konfiguration"><span class="octicon octicon-link"></span></a>1. Konfiguration</h2>
+
+<h3>
+<a name="11-vorbedingungen" class="anchor" href="#11-vorbedingungen"><span class="octicon octicon-link"></span></a>1.1 Vorbedingungen</h3>
+
+<h5>
+<a name="schl%C3%BCsselbund" class="anchor" href="#schl%C3%BCsselbund"><span class="octicon octicon-link"></span></a>Schlüsselbund</h5>
+
+<p>Im OS X Programm <em>«Schlüsselbundverwaltung»</em> muss unter dem Schlüsselbund <em>«Anmeldung»</em> ein Eintrag mit 
+<em>«Name für Schlüsselbundeintrag»</em> <strong>FHNW</strong> (und Accountname [<em>vorname.nachname</em>] und Passwort) vorhanden sein.</p>
+
+<h5>
+<a name="rsync-30" class="anchor" href="#rsync-30"><span class="octicon octicon-link"></span></a>rsync 3.0</h5>
+
+<p>Das Unix-Programm <code>rsync</code> muss in der Version 3.x installiert sein (OS X Standard: 2.6)<br><em>Hinweis:</em>
+Welche Version installiert ist, sieht man, wenn man im Terminal <code>rsync --version</code> eingibt.  </p>
+
+<p><strong>Installation rsync 3:</strong><br>
+1. Am einfachsten geht dies über <a href="http://brew.sh/">Homebrew</a>, ein Package Manager für OS X. (Alternative: Macports)<br>
+2. Terminal: <code>brew update</code><br>
+3. Terminal: <code>brew install rsync</code><br>
+4. Computer neustarten<br>
+5. Terminal: <code>/usr/local/bin/rsync --version</code> sollte nun Version 3.x anzeigen.</p>
+
+<h5>
+<a name="skript-anpassen" class="anchor" href="#skript-anpassen"><span class="octicon octicon-link"></span></a>Skript anpassen</h5>
+
+<p>.scpt-Datei mit dem Applescript-Editor (in OS X standardmässig vorhanden) öffnen.</p>
+
+<h3>
+<a name="12-skriptvariablen" class="anchor" href="#12-skriptvariablen"><span class="octicon octicon-link"></span></a>1.2 Skriptvariablen</h3>
+
+<h5>
+<a name="thetext" class="anchor" href="#thetext"><span class="octicon octicon-link"></span></a><code>theText</code>
+</h5>
+
+<p>Was in diesem Fenster steht unter <em>«VPN-Verbindung»</em> (sprachspezifisch)
+<img src="http://i.imgur.com/SgGjxzA.png" alt="theText"></p>
+
+<h5>
+<a name="thevpn" class="anchor" href="#thevpn"><span class="octicon octicon-link"></span></a><code>theVPN</code>
+</h5>
+
+<p>Name der VPN-Verbindung unter <em>«Systemeinstellungen»</em> &gt; <em>«Netzwerk»</em> (hier: VPN FHNW)
+<img src="http://i.imgur.com/ZBEliHC.png" alt="theVPN"></p>
+
+<h5>
+<a name="sourcefolder" class="anchor" href="#sourcefolder"><span class="octicon octicon-link"></span></a><code>sourcefolder</code>
+</h5>
+
+<p>Hier Klassenordner eintragen (Active Directory: <code>CMD+I</code> auf gewünschten Ordner, Pfad anpassen, <strong>nicht einfach kopieren</strong>, es braucht <code>/Volumes/e_18_data11$...</code>)</p>
+
+<h5>
+<a name="localfolder" class="anchor" href="#localfolder"><span class="octicon octicon-link"></span></a><code>localfolder</code>
+</h5>
+
+<p>Hier gewünschten lokalen Ordner (Dropbox?) eintragen (Pfad herausfinden:<code>CMD+I</code> auf Ordner)  </p>
+
+<h2>
+<a name="2-app-exportieren" class="anchor" href="#2-app-exportieren"><span class="octicon octicon-link"></span></a>2. App exportieren</h2>
+
+<ol>
+<li>Im Applescript-Editor: Ablage &gt; Exportieren... &gt; Dateiformat: Programm, Haken «nur ausführbar» setzen<br>
+</li>
+<li>.app in «Programme» ziehen</li>
+</ol><h3>
+<a name="hinweis-os-x-109-maverick" class="anchor" href="#hinweis-os-x-109-maverick"><span class="octicon octicon-link"></span></a>Hinweis: OS X 10.9 Maverick</h3>
+
+<p>Unter Maverick muss folgendes eingestellt werden, sonst gibt es ein Berechtigungsproblem:
+AppleScript-Editor bzw. die oben erstelle .app muss Häkchen erhalten unter Systemeinstellungen &gt; Sicherheit &gt; Privatsphäre &gt; Bedienungshilfen
+<img src="http://i.imgur.com/a5XTa53.png" alt="Berechtigung"></p>
+
+<h2>
+<a name="basiscode-von" class="anchor" href="#basiscode-von"><span class="octicon octicon-link"></span></a>Basiscode von:</h2>
+
+<h4>
+<a name="fhnw-vpn-connector-jan-f%C3%A4ssler" class="anchor" href="#fhnw-vpn-connector-jan-f%C3%A4ssler"><span class="octicon octicon-link"></span></a>FHNW VPN Connector (Jan Fässler)</h4>
+
+<ul>
+<li><a href="http://janfaessler.ch/archives/822">http://janfaessler.ch/archives/822</a></li>
+<li><a href="https://github.com/janfaessler/FHNW-VPN-Connector">https://github.com/janfaessler/FHNW-VPN-Connector</a></li>
+</ul><h4>
+<a name="automated-token-generation-and-vpn-logins-corey-gilmore" class="anchor" href="#automated-token-generation-and-vpn-logins-corey-gilmore"><span class="octicon octicon-link"></span></a>Automated token generation and VPN logins (Corey Gilmore)</h4>
+
+<ul>
+<li><a href="http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/">http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/</a></li>
+</ul><h4>
+<a name="andy-breuhan" class="anchor" href="#andy-breuhan"><span class="octicon octicon-link"></span></a>Andy Breuhan</h4>
+
+<ul>
+<li><a href="http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/">http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/davidhuser">davidhuser</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
