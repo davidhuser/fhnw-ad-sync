@@ -1,11 +1,10 @@
-#FHNW Active Directory Folder Sync Script
+#FHNW Active Directory Folder Sync
 
 Dieses Skript verbindet sich bei Programmstart automatisch mit dem VPN der FHNW (Passwort ausgelesen aus dem Schlüsselbund von OS X), mountet das Active Directory und synchronisiert unidirektional den angegebenen (Klassen-)Ordner in den angegebenen lokalen Ordner.
 
 ## 1. Konfiguration
 
 ### 1.1 Vorbedingungen
-====
 ##### Schlüsselbund
 Im OS X Programm *«Schlüsselbundverwaltung»* muss unter dem Schlüsselbund *«Anmeldung»* ein Eintrag mit 
 *«Name für Schlüsselbundeintrag»* **FHNW** (und Accountname [*vorname.nachname*] und Passwort) vorhanden sein.
@@ -24,11 +23,10 @@ Welche Version installiert ist, sieht man, wenn man im Terminal `rsync --version
 
 
 ##### Skript anpassen
-.spct-Datei mit dem Applescript-Editor (in OS X standardmässig vorhanden) öffnen.
+.scpt-Datei mit dem Applescript-Editor (in OS X standardmässig vorhanden) öffnen.
 
 
 ### 1.2 Skriptvariablen
-====
 ##### `theText`
 Was in diesem Fenster steht unter *«VPN-Verbindung»* (sprachspezifisch)
 ![theText](http://i.imgur.com/SgGjxzA.png)
@@ -53,7 +51,6 @@ Unter Maverick muss folgendes eingestellt werden, sonst gibt es ein Berechtigung
 AppleScript-Editor bzw. die oben erstelle .app muss Häkchen erhalten unter Systemeinstellungen > Sicherheit > Privatsphäre > Bedienungshilfen
 ![Berechtigung](http://i.imgur.com/a5XTa53.png)
 
-## Code
-===
+## Basiscode von:
 #### FHNW VPN Connector (Jan Fässler)+ [http://janfaessler.ch/archives/822](http://janfaessler.ch/archives/822)+ [https://github.com/janfaessler/FHNW-VPN-Connector](https://github.com/janfaessler/FHNW-VPN-Connector)
 #### Automated token generation and VPN logins (Corey Gilmore)+ [http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/](http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/)#### Andy Breuhan+ [http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/](http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/)
