@@ -58,6 +58,8 @@ die oben erstelle .app muss Häkchen erhalten unter Systemeinstellungen > Sicher
 ## Basiscode von:
 #### FHNW VPN Connector (Jan Fässler)+ [http://janfaessler.ch/archives/822](http://janfaessler.ch/archives/822)+ [https://github.com/janfaessler/FHNW-VPN-Connector](https://github.com/janfaessler/FHNW-VPN-Connector)
 #### Automated token generation and VPN logins (Corey Gilmore)+ [http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/](http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/)#### Andy Breuhan+ [http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/](http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/)
+
+FHNW Active Directory Folder Sync is licensed under [GPLv3](http://choosealicense.com/licenses/gpl-v3/)
 ***## Changelog
 **0.2** – mehrere Ordner möglich zu syncen  
 **0.1** – init
