@@ -15,15 +15,17 @@ Das Unix-Programm `rsync` muss in der Version 3.x installiert sein (OS X Standar
 Welche Version installiert ist, sieht man, wenn man im Terminal `rsync --version` eingibt.  
   
 **Installation rsync 3:**  
-1. Am einfachsten geht dies über [Homebrew](http://brew.sh/), ein Package Manager für OS X. (Alternative: Macports)   
-2. Terminal: `brew update`  
-3. Terminal: `brew install rsync`  
-4. Computer neustarten  
-5. Terminal: `/usr/local/bin/rsync --version` sollte nun Version 3.x anzeigen.
+1. Am einfachsten geht dies über [Homebrew](http://brew.sh/), ein Package Manager für OS X. (Alternative: Macports).  
+Homebrew installieren inkl. aktualisierte XCode Developer Tools (im Installationsprozess)   
+2. Terminal: `brew doctor` sollte wenn möglich keine Errors generieren.
+3. Terminal:  
+`brew tap homebrew/dupes`  
+`brew install rsync`  
+5. Terminal: `/usr/local/bin/rsync --version` sollte nun Version 3.x zeigen.
 
 
 ##### Skript anpassen
-.scpt-Datei mit dem Applescript-Editor (in OS X standardmässig vorhanden) öffnen.
+die herunterladbare .scpt-Datei *FHNW-AD-SYNC.scpt* mit dem Applescript-Editor (in OS X standardmässig vorhanden) öffnen.
 
 
 ### 1.2 Skriptvariablen
@@ -48,7 +50,7 @@ Hier gewünschten lokalen Ordner (Dropbox?) eintragen (Pfad herausfinden:`CMD+I`
 
 ### Hinweis: OS X 10.9 Maverick
 Unter Maverick muss folgendes eingestellt werden, sonst gibt es ein Berechtigungsproblem:
-AppleScript-Editor bzw. die oben erstelle .app muss Häkchen erhalten unter Systemeinstellungen > Sicherheit > Privatsphäre > Bedienungshilfen
+die oben erstelle .app muss Häkchen erhalten unter Systemeinstellungen > Sicherheit > Privatsphäre > Bedienungshilfen
 ![Berechtigung](http://i.imgur.com/a5XTa53.png)
 
 ## Basiscode von:
