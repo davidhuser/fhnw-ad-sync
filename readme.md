@@ -15,13 +15,13 @@ Das Unix-Programm `rsync` **muss** in der Version 3.x installiert sein (OS X Sta
 Welche Version installiert ist, sieht man, wenn man im Terminal `rsync --version` eingibt.  
   
 **Installation rsync 3.x:**  
-**1.** Am einfachsten geht dies über [Homebrew](http://brew.sh/), ein Package Manager für OS X:   
+1. Am einfachsten geht dies über [Homebrew](http://brew.sh/), ein Package Manager für OS X:   
 => Homebrew installieren *inkl. aktualisierte XCode Developer Tools*  
-**2. **Terminal: `brew doctor` ... sollte wenn möglich keine Errors generieren   
-**3.** Terminal:  
+2. Terminal: `brew doctor` ... sollte wenn möglich keine Errors generieren   
+3. Terminal:  
 `brew tap homebrew/dupes`  
 `brew install rsync`  
-**4.** Terminal: `/usr/local/bin/rsync --version` ... sollte nun Version 3.x zeigen.
+4. Terminal: `/usr/local/bin/rsync --version` ... sollte nun Version 3.x zeigen.
 
 
 ##### Skript anpassen
