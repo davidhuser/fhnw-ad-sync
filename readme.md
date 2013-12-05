@@ -1,8 +1,8 @@
-#FHNW Active Directory Folder Sync
+#FHNW Active Directory Folder Sync [One Click]
 
 > Dieses Skript verbindet sich bei Programmstart automatisch mit dem VPN der FHNW (Passwort ausgelesen aus dem Schlüsselbund von OS X), mountet das Active Directory und synchronisiert unidirektional die angegebenen (Klassen-)Ordner in den angegebenen lokalen Ordner.
 
-Es wird empfohlen, einen Ordner nur für Unterlagen zu haben, **da Änderungen überschrieben** werden. Am besten synchronisiert man direkt in die Dropbox/Google Drive/etc.
+Es wird empfohlen, einen Ordner nur für Unterlagen zu haben, **da Änderungen und Bearbeitungen in z.B. PDFs überschrieben** werden. Am besten synchronisiert man direkt in die Dropbox/Google Drive/etc.
 ***
 ## 1. Konfiguration
 
@@ -56,10 +56,20 @@ die oben erstelle .app muss Häkchen erhalten unter Systemeinstellungen > Sicher
 ![Berechtigung](http://i.imgur.com/cEUxUbG.png)
 ***
 ## Basiscode von:
-#### FHNW VPN Connector (Jan Fässler)+ [http://janfaessler.ch/archives/822](http://janfaessler.ch/archives/822)+ [https://github.com/janfaessler/FHNW-VPN-Connector](https://github.com/janfaessler/FHNW-VPN-Connector)
-#### Automated token generation and VPN logins (Corey Gilmore)+ [http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/](http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/)#### Andy Breuhan+ [http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/](http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/)
+#### FHNW VPN Connector (Jan Fässler)
++ [http://janfaessler.ch/archives/822](http://janfaessler.ch/archives/822)
++ [https://github.com/janfaessler/FHNW-VPN-Connector](https://github.com/janfaessler/FHNW-VPN-Connector)
+
+#### Automated token generation and VPN logins (Corey Gilmore)
++ [http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/](http://coreygilmore.com/projects/automated-securid-token-generation-and-vpn-login-applescript/)
+
+#### Andy Breuhan
++ [http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/](http://www.andybreuhan.de/2010/04/06/mac-os-x-10-6-vpn-passwort-speichern/)
 
 FHNW Active Directory Folder Sync is licensed under [GPLv3](http://choosealicense.com/licenses/gpl-v3/)
-***## Changelog
-**0.2** – mehrere Ordner möglich zu syncen  
+
+***
+## Changelog
+
+**0.2** – mehrere Ordner möglich zu syncen  
 **0.1** – init
