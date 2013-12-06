@@ -1,8 +1,8 @@
-#FHNW Active Directory Folder Sync [One Click]
+#FHNW Active Directory Folder Sync (one click)
 
 > Dieses Skript verbindet sich bei Programmstart automatisch mit dem VPN der FHNW (Passwort ausgelesen aus dem Schlüsselbund von OS X), mountet das Active Directory und synchronisiert unidirektional die angegebenen (Klassen-)Ordner in den angegebenen lokalen Ordner.
 
-Es wird empfohlen, einen Ordner nur für Unterlagen zu haben, **da Änderungen und Bearbeitungen in z.B. PDFs überschrieben** werden. Am besten synchronisiert man direkt in die Dropbox/Google Drive/etc.
+Es wird empfohlen, einen Ordner nur für Unterlagen zu haben. **Bearbeitete Dateien werden nicht überschrieben, neue Dateien (die nur lokal vorhanden sind) werden nicht gelöscht.** Am besten synchronisiert man direkt in die Dropbox/Google Drive/etc.
 ***
 ## 1. Konfiguration
 
