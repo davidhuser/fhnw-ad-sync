@@ -50,7 +50,7 @@ Hier **einen oder mehrere Ordner** mit Komma und alt+Enter (siehe Beispiel im Co
 ## 2. App exportieren
 
 **1.** Im Applescript-Editor: Ablage > Exportieren... > Name geben, Dateiformat: Programm, Haken «nur ausführbar» setzen  
-**2.** .app in «Programme» ziehen
+**2.** .app in «Programme» ziehen  
 **3.** optional: [App Icon ändern](http://www.visualpharm.com/articles/change_mac_icons.html)
 ***
 ### Hinweis: OS X 10.9 Maverick
