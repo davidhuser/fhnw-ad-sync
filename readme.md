@@ -1,6 +1,6 @@
 #FHNW Active Directory Folder Sync (one click)
 
-![Screenshot](http://i.imgur.com/PH9SRiN.png)
+![Screenshot](http://i.imgur.com/5O9Aunn.png)
 
 > Dieses Skript verbindet sich bei Programmstart automatisch mit dem VPN der FHNW (Passwort ausgelesen aus dem Schlüsselbund von OS X), mountet das Active Directory und synchronisiert unidirektional die angegebenen (Klassen-)Ordner in den angegebenen lokalen Ordner.
 
