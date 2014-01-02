@@ -76,3 +76,5 @@ FHNW Active Directory Folder Sync is licensed under [GPLv3](http://choosealicens
 
 **0.2** – mehrere Ordner möglich zu syncen  
 **0.1** – init
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/davidhuser/fhnw-ad-sync/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
